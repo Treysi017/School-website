@@ -1,0 +1,80 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* Set the base font for the page */
+body {
+    font-family: 'Bebas Neue', sans-serif; /* Ensure a fallback font is provided */
+}
+
+/* Style the header and navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; /* Set the height of the header */
+    padding: 0 7%; /* Horizontal padding */
+    background: rgb(255, 255, 255, 0.5); /* 50% opacity background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Logo container styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+
+}
+
+/* Logo image styling */
+.logo {
+    height: 60px; /* Adjust as needed */
+    margin-right: 10px;
+}
+
+/* School name styling */
+.school-name {
+    font-family: 'Bebas Neue';
+    font-size: 24px; /* Adjust font size */
+    color: #001021;
+}
+
+/* Navigation links styling */
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation links styling */
+.nav-links li a {
+    text-decoration: none;
+    color: #001021;
+    font-weight: normal; /* Set font weight to regular */
+    font-size: 24px; /* Adjust font size for nav links */
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #11B5E4; /* Highlight color on hover */
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide nav links on mobile */
+    }
+}
