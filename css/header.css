@@ -1,4 +1,3 @@
-/* Reset some default browser styles */
 body, h1, h2, h3, h4, h5, h6, p, ul {
     margin: 0;
     padding: 0;
@@ -6,49 +5,42 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
     list-style: none;
 }
 
-/* Set the base font for the page */
 body {
-    font-family: 'Bebas Neue', sans-serif; /* Ensure a fallback font is provided */
+    font-family: 'Bebas Neue', sans-serif; 
 }
 
-/* Style the header and navigation */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px; /* Set the height of the header */
-    padding: 0 7%; /* Horizontal padding */
-    background: rgb(255, 255, 255, 0.5); /* 50% opacity background */
-    backdrop-filter: blur(10px); /* Blur effect */
-    position: fixed; /* Fix the header at the top */
+    height: 80px; 
+    padding: 0 7%; 
+    background: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(10px); 
+    position: fixed; 
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Ensure it stays above other content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
-/* Logo container styling */
 .logo-container {
     display: flex;
     align-items: center;
-
 }
 
-/* Logo image styling */
 .logo {
-    height: 60px; /* Adjust as needed */
+    height: 60px; 
     margin-right: 10px;
 }
 
-/* School name styling */
 .school-name {
     font-family: 'Bebas Neue';
-    font-size: 24px; /* Adjust font size */
+    font-size: 24px; 
     color: #001021;
 }
 
-/* Navigation links styling */
 .nav-links {
     display: flex;
     gap: 25px;
@@ -59,22 +51,91 @@ header {
     align-items: center;
 }
 
-/* Navigation links styling */
 .nav-links li a {
     text-decoration: none;
     color: #001021;
-    font-weight: normal; /* Set font weight to regular */
-    font-size: 24px; /* Adjust font size for nav links */
+    font-weight: normal; 
+    font-size: 24px; 
     transition: color 0.3s;
 }
 
 .nav-links li a:hover {
-    color: #11B5E4; /* Highlight color on hover */
+    color: #11B5E4; 
 }
 
-/* Mobile responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .nav-links {
-        display: none; /* Hide nav links on mobile */
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px; 
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.9); 
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links.mobile-nav-active {
+        display: flex; 
+    }
+
+    .mobile-menu-icon {
+        display: block; 
+        font-size: 30px;
+        color: #001021;
+        cursor: pointer;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .school-name {
+        font-size: 20px; 
+    }
+}
+
+
+.mobile-menu-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-icon {
+        display: block; 
+    }
+
+    .hero-text {
+        width: 300px;
+        left: 5%;
+        margin-top: 30px;
+    }
+
+    .gradient-overlay {
+        top: 80px;
+        height: calc(100% - 50px);
+    }
+    
+    #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        padding: 0 3%;
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+
 }
