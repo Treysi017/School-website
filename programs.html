@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CupSenHigh - Programs Offered</title>
-        <link rel="stylesheet" href="css/programs.css">
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/footer.css">
-
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CupSenHigh - Programs Offered</title>
+    <link rel="stylesheet" href="css/programs.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
 <body>
 
 <header>
@@ -31,13 +30,12 @@
     </nav>
 </header>
 
-
 <section id="programs">
     <div class="container">
         <div class="section-header">
             <h2>Explore Our Academic Tracks & Strands</h2>
             <p>Discover the Path That Suits Your Passion and Goals</p>
-        <div/>
+        </div>
 
         <div class="content">
             <aside class="tracks-menu">
@@ -58,15 +56,191 @@
 
                     <!-- Other Tracks -->
                     <li class="track-category">Other Tracks</li>
-                    <li class="track-item" data-track="arts">Arts and Design Track</li>
+                    <li class="track-item" data-track="arts-and-design">Arts and Design Track</li>
                     <li class="track-item" data-track="sports">Sports Track</li>
                 </ul>
             </aside>
 
+
             <!-- Track/Strand Description Details -->
             <article class="track-details">
-                
+                <!-- STEM Strand -->
+                <div class="track-description" id="stem-description">
+                    <h3>Science, Technology, Engineering, and Mathematics (STEM) Strand</h3>
+                    <p class="description-text">The STEM strand is crafted for students who have a strong passion for science, technology, engineering, and mathematics. This program offers a rigorous curriculum that includes advanced courses in Mathematics, Biology, Chemistry, Physics, and Computer Science. Students are immersed in research, hands-on experiments, and collaborative projects that challenge their problem-solving abilities and innovation. With access to state-of-the-art laboratories and technology, students engage in activities like robotics, engineering design, and scientific research. Below is a list of possible career paths you can take under this track:</p>
+                    <div class="career-path-container">
+                        <div class="career-path">
+                            <ul class="career-path-list">
+                                <li>Engineering (e.g., Civil, Mechanical, Electrical)</li>
+                                <li>Medicine</li>
+                                <li>Information Technology</li>
+                                <li>Computer Science</li>
+                                <li>Environmental Science</li>
+                                <li>Architecture</li>
+                                <li>Research & Development</li>
+                            </ul>
+                        </div>
+                        <div class="image-placeholder">
+                            <img src="Images/stem_placeholder.jpg" alt="STEM Image">
+                        </div>
+                    </div>
+                    
+                </div>
+            
+                <!-- ABM Strand -->
+                <div class="track-description active" id="abm-description">
+                    <h3>Accountancy, Business, and Management (ABM) Strand</h3>
+                    <p class="description-text">The ABM strand is tailored for students who are interested in the corporate world, economics, and entrepreneurship. The curriculum provides in-depth knowledge in Accounting, Business Management, Economics, and Marketing. Students learn how to manage financial resources, run a business, and understand market dynamics through case studies, simulations, and real-world business scenarios. This strand prepares students with the necessary skills to excel in the competitive business environment. Below is a list of possible career paths you can take under this track:</p>
+                    <div class="career-path-container">
+                        <ul class="career-path-list">
+                            <li>Accounting (e.g., Certified Public Accountant)</li>
+                            <li>Business Management (e.g., Operations Manager, Project Manager)</li>
+                            <li>Finance (e.g., Financial Analyst, Investment Banker)</li>
+                            <li>Marketing (e.g., Brand Manager, Market Research Analyst)</li>
+                            <li>Entrepreneurship (e.g., Business Owner, Startup Founder)</li>
+                            <li>Human Resources (e.g., HR Manager, Recruitment Specialist)</li>
+                        </ul>
+                        <div class="image-placeholder">
+                            <img src="Images/ABM.png" alt="ABM Image">
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- HUMSS Strand -->
+                <div class="track-description" id="humss-description">
+                    <h3>Humanities and Social Sciences (HUMSS) Strand</h3>
+                    <p class="description-text">The HUMSS strand is ideal for students who are interested in understanding human behavior, society, and culture. This program focuses on subjects such as Psychology, Sociology, Political Science, and Literature. Students develop critical thinking, research skills, and effective communication abilities through discussions, debates, and community-based research projects. The HUMSS strand encourages students to explore social issues, cultural phenomena, and historical contexts, fostering a deep understanding of the world around them. Below is a list of possible career paths you can take under this track:</p>
+                    <div class="career-path-container">  
+                        <ul class="career-path-list">
+                            <li>Psychology</li>
+                            <li>Social Work</li>
+                            <li>Journalism</li>
+                            <li>Law</li>
+                            <li>Education</li>
+                            <li>Public Administration</li>
+                            <li>Political Science</li>
+                        </ul>
+                        <div class="image-placeholder">
+                            <img src="Images/humss_placeholder.jpg" alt="HUMSS Image">
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- GAS Strand -->
+                <div class="track-description" id="gas-description">
+                    <h3>General Academic Strand (GAS)</h3>
+                    <p class="description-text">The GAS strand offers a flexible curriculum for students who are undecided about which specific academic track to pursue. This strand provides a broad range of subjects from the different tracks, allowing students to explore various fields of study before making a final decision on their career path. The GAS strand emphasizes critical thinking, problem-solving, and communication skills, preparing students for a wide array of future opportunities. Below is a list of possible career paths you can take under this track:</p>
+                    <div class="career-path-container">
+                         
+                        <ul class="career-path-list">
+                            <li>Arts</li>
+                            <li>Sciences</li>
+                            <li>Business</li>
+                            <li>Social Sciences</li>
+                        </ul>
+                        <div class="image-placeholder">
+                            <img src="Images/gas_placeholder.jpg" alt="GAS Image">
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- HE Strand -->
+                <div class="track-description" id="he-description">
+                    <h3>Home Economics (HE) Strand</h3>
+                    <p class="description-text">The HE strand is designed for students who are interested in practical skills and knowledge related to home management, culinary arts, fashion design, and other domestic skills. The curriculum covers a wide range of topics, including nutrition, food preparation, sewing, budgeting, and home management. Students engage in hands-on activities and real-world applications that prepare them for various careers in the hospitality and lifestyle industries. Below is a list of possible career paths you can take under this track:</p>
+                    <div class="career-path-container">
+                         
+                        <ul class="career-path-list">
+                            <li>Culinary Arts</li>
+                            <li>Hospitality Management</li>
+                            <li>Fashion Design</li>
+                            <li>Interior Design</li>
+                            <li>Home Economics Education</li>
+                        </ul>
+                        <div class="image-placeholder">
+                            <img src="Images/he_placeholder.jpg" alt="HE Image">
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- IA Strand -->
+                <div class="track-description" id="ia-description">
+                    <h3>Industrial Arts (IA) Strand</h3>
+                    <p class="description-text">The IA strand focuses on technical skills and knowledge related to various trades and industrial fields. The curriculum includes courses in carpentry, automotive repair, welding, electronics, and drafting. Students gain hands-on experience through workshops and practical training, preparing them for immediate employment in the industrial sector or further vocational studies. Below is a list of possible career paths you can take under this track:</p>
+                    <div class="career-path-container">
+                         
+                        <ul class="career-path-list">
+                            <li>Carpenters</li>
+                            <li>Welders</li>
+                            <li>Automotive Technicians</li>
+                            <li>Electricians</li>
+                            <li>Draftsmen</li>
+                        </ul>
+                        <div class="image-placeholder">
+                            <img src="Images/ia_placeholder.jpg" alt="IA Image">
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- ICT Strand -->
+                <div class="track-description" id="ict-description">
+                    <h3>Information and Communications Technology (ICT) Strand</h3>
+                    <p class="description-text">The ICT strand is tailored for students who are passionate about technology and digital innovation. This program covers a wide range of topics, including programming, web development, computer systems, networking, and multimedia. Students engage in coding, software development, and IT infrastructure management, gaining practical experience through projects and internships. The ICT strand equips students with the skills needed to thrive in the rapidly evolving tech industry. Below is a list of possible career paths you can take under this track:</p>
+                    <div class="career-path-container">
+                         
+                        <ul class="career-path-list">
+                            <li>Software Development</li>
+                            <li>Web Design</li>
+                            <li>Network Administration</li>
+                            <li>IT Support</li>
+                            <li>Multimedia Production</li>
+                        </ul>
+                        <div class="image-placeholder">
+                            <img src="Images/ict_placeholder.jpg" alt="ICT Image">
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Arts and Design Track -->
+                <div class="track-description" id="arts-and-design-description">
+                    <h3>Arts and Design Track</h3>
+                    <p class="description-text">The Arts and Design track is designed for students with a passion for creativity and artistic expression. This program offers a diverse curriculum that includes Visual Arts, Performing Arts, and Multimedia Design. Students engage in courses such as Drawing, Painting, Sculpture, Theater, and Film Production. The track also includes opportunities for students to participate in workshops, exhibitions, and performances, allowing them to showcase their talents and build a professional portfolio. Below is a list of possible career paths you can take under this track:</p>
+                    <div class="career-path-container">
+                        <ul class="career-path-list">
+                            <li>Visual Arts</li>
+                            <li>Graphic Design</li>
+                            <li>Animation</li>
+                            <li>Film and Theater Production</li>
+                            <li>Fashion Design</li>
+                            <li>Interior Design</li>
+                        </ul>
+                        <div class="image-placeholder">
+                            <img src="Images/arts_and_design_placeholder.jpg" alt="Arts and Design Image">
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Sports Track -->
+                <div class="track-description" id="sports-description">
+                    <h3>Sports Track</h3>
+                    <p class="description-text">The Sports track is ideal for students who are passionate about athletics and physical education. This program includes courses in Sports Science, Coaching, Physical Conditioning, and Nutrition. Students receive training in athletic performance, participate in sports competitions, and learn about injury prevention and sports management. The Sports track emphasizes both physical fitness and the strategic aspects of sports, preparing students for careers in athletics, fitness, and sports administration. Below is a list of possible career paths you can take under this track:</p>
+                    <div class="career-path-container">
+                         
+                        <ul class="career-path-list">
+                            <li>Professional Athletics</li>
+                            <li>Coaching</li>
+                            <li>Sports Science</li>
+                            <li>Physical Education</li>
+                            <li>Sports Management</li>
+                            <li>Fitness Training</li>
+                        </ul>
+                        <div class="image-placeholder">
+                            <img src="Images/sports_placeholder.jpg" alt="Sports Image">
+                        </div>
+                    </div>
+                </div>
             </article>
+            
         </div>
     </div>
 </section>
@@ -170,17 +344,39 @@
             navLinks.classList.toggle('mobile-nav-active');
         }
         
+        document.addEventListener("DOMContentLoaded", function () {
+    const trackDescriptions = document.querySelectorAll(".track-description");
+    const tabs = document.querySelectorAll(".track-item");
 
-        document.querySelectorAll('.track-item').forEach(item => {
-    item.addEventListener('mouseover', function() {
-        const track = this.dataset.track;
-        const description = document.querySelector(`#${track}-description`);
-        document.querySelectorAll('.track-description').forEach(desc => {
-            desc.classList.remove('active');
+    function showTrack(id) {
+        trackDescriptions.forEach((description) => {
+            description.classList.remove("active");
         });
-        description.classList.add('active');
+        const selectedDescription = document.getElementById(id);
+        if (selectedDescription) {
+            selectedDescription.classList.add("active");
+        }
+
+        tabs.forEach((tab) => {
+            tab.classList.remove("active");
+        });
+        const selectedTab = document.querySelector(`.track-item[data-track="${id}"]`);
+        if (selectedTab) {
+            selectedTab.classList.add("active");
+        }
+    }
+
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", function () {
+            const trackId = this.getAttribute("data-track");
+            showTrack(trackId + "-description");
+        });
     });
+
+    // Set default active track to ABM on page load
+    showTrack("abm-description");
 });
+
 
     </script>
 </body>
