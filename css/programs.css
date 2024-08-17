@@ -37,15 +37,15 @@ p {
     margin-bottom: 20px;
 }
 
-#programs{
-    position: relative;    
+#programs {
+    position: relative;
     margin: 0 auto;
-    padding: 0 7%; 
+    padding: 0 7%;
     box-sizing: border-box;
-    overflow: hidden; 
+    overflow: hidden;
     margin-top: 80px;
+    margin-bottom: 40px;
 }
-
 
 
 /* Section Header */
@@ -69,7 +69,6 @@ p {
 .content {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
 }
 
 .tracks-menu {
@@ -96,13 +95,20 @@ p {
     margin-bottom: 10px;
 }
 
+/* Default styling for track items */
 .track-item {
     cursor: pointer;
     padding: 10px;
     transition: background-color 0.3s, color 0.3s;
 }
 
-.track-item:hover,
+/* Hover effect */
+.track-item:hover {
+    background-color: #11B5E4;
+    color: white;
+}
+
+/* Active state styling */
 .track-item.active {
     background-color: #11B5E4;
     color: white;
@@ -112,17 +118,69 @@ p {
 .track-details {
     width: 65%;
     padding: 20px;
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
     border-radius: 5px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.track-description h3 {
+    text-align: center;   
+    font-weight: 600;      
+    font-size: 24px;      
+    margin-bottom: 20px;   
+}
+
 .track-description {
     display: none;
-    transition: opacity 0.3s;
+    padding: 20px;
+    /* margin: 20px 0; */
+    border-radius: 5px;
+    /* background-color: #f9f9f9; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .track-description.active {
     display: block;
-    opacity: 1;
+}
+
+.description-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.career-path-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.career-path {
+    flex: 70%; 
+}
+
+.career-path h4 {
+    margin-bottom: 0.5rem; 
+    font-size: 1.25rem; 
+}
+
+.career-path-list {
+    list-style-type: disc; 
+    margin-left: 20px; 
+    padding-left: 0; 
+}
+
+.career-path-list li {
+    margin-bottom: 10px;
+    margin-top: 0; 
+}
+
+.image-placeholder {
+    flex: 30%; 
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover; 
 }
