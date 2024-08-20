@@ -1,0 +1,236 @@
+/* Default CSS for Body and HTML */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hero Header Section */
+#student-life-hero-header {
+    position: relative;
+    width: 100%;
+    height: 825px; 
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Hero Banner */
+.hero-banner {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-banner img {
+    width: 100%;
+    height: 490px;
+    object-fit: cover;
+    display: block; /* Ensures no extra space at the bottom of the image */
+}
+
+/* Hero Content */
+.hero-content {
+    display: flex;
+    align-items:center; /* Aligns items to the start of the flex container */
+    width: 100%;
+    padding: 20px 7%; /* Adds padding to the sides for content but not the banner */
+    max-width: 1440px; /* Optional: constrains content to the width of the banner */
+    margin: 0 auto; /* Centers the content */
+}
+
+/* Hero Text */
+.hero-text {
+    flex: 1;
+    max-width: 550px; /* Ensures the column width does not exceed 550px */
+    padding-right: 20px;
+    margin-right: 145px; /* Adds 145px space between headline and description */
+}
+
+.hero-text h2 {
+    color: var(--dARK-bLUE, #0A1128);
+    font-family: "Bebas Neue";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+/* Hero Description */
+.hero-description {
+    flex: 1;
+    max-width: 550px; /* Ensures the column width does not exceed 550px */
+}
+
+.hero-description p {
+    color: var(--dARK-bLUE, #0A1128);
+    text-align: justify;
+    font-family: "Source Sans Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+
+/* Clubs Section */
+#clubs-section {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.clubs-title-container p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--dARK-bLUE, #0A1128);
+}
+
+
+.clubs-headline-container h2 {
+    color: var(--dARK-bLUE, #0A1128);
+    font-family: "Bebas Neue";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.clubs-desc-container p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    margin-bottom: 50px;
+    color: var(--dARK-bLUE, #0A1128);
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    overflow: hidden;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.carousel-item img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carousel-controls {
+    margin-top: 20px;
+}
+
+.carousel-dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.carousel-dot.active {
+    background-color: var(--dARK-bLUE, #0A1128);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 70%;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-left {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.modal-left img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.modal-right {
+    flex: 1 1 60%;
+    padding-left: 20px;
+}
+
+.modal-right h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.modal-right p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+#register-button {
+    padding: 10px 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    background-color: #0A1128;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#register-button:hover {
+    background-color: #333;
+}
+
+/* Adjustments for mobile */
+@media (max-width: 768px) {
+    .modal-content {
+        flex-direction: column;
+    }
+
+    .modal-left, .modal-right {
+        flex: 1 1 100%;
+        padding: 0;
+    }
+
+    .modal-right {
+        padding-top: 20px;
+    }
+}
