@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CupSenHigh - Home</title>
+    <link rel="stylesheet" href="css/studentlife.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Images/CSHS logo.png" alt="Logo" class="logo">
+            <div class="school-name">CUPSENHIGH</div>
+        </div>
+        <nav>
+            <div class="mobile-menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Mobile menu icon -->
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="programs.html">PROGRAMS OFFERED</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="admission.html">ADMISSION</a></li>
+                <li><a href="student-life.html">STUDENT LIFE</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Header Section -->
+    <section id="student-life-hero-header">
+        <div class="hero-banner">
+            <img src="Images/studentlifebanner.png" alt="Student Life Banner">
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Grow, Learn, Connect: The Value of Joining Clubs & Organizations</h2>
+            </div>
+            <div class="hero-description">
+                <p>At Cupang Senior High School, joining clubs and organizations offers essential life skills, unique learning opportunities, and the chance to build lasting connections, enhancing your personal and academic growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clubs Section -->
+    <section id="clubs-section">
+        <div class="clubs-title-container">
+            <h2>Clubs</h2>
+        </div>
+        <div class="clubs-headline-container">
+            <h3>Our Diverse Clubs</h3>
+        </div>
+        <div class="clubs-desc-container">
+            <p>Explore our diverse range of clubs and register</p>
+        </div>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="Images/Club Logo/ArtClub.png" alt="Club Logo 1" class="club-logo" data-club="Art Club">
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/Club Logo/LiteratureClub.png" alt="Club Logo 2" class="club-logo" data-club="Literature Club">
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/Club Logo/MathClub.png" alt="Club Logo 3" class="club-logo" data-club="Math Club">
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/Club Logo/MusicClub.png" alt="Club Logo 4" class="club-logo" data-club="Music Club">
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/Club Logo/ScienceClub.png" alt="Club Logo 5" class="club-logo" data-club="Science Club">
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <span class="carousel-dot" data-slide="0"></span>
+                <span class="carousel-dot" data-slide="1"></span>
+                <span class="carousel-dot" data-slide="2"></span>
+                <!-- Add more dots as needed based on the number of carousel items -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Club Details -->
+    <div id="club-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-left">
+                <img id="modal-logo" src="" alt="Club Logo">
+            </div>
+            <div class="modal-right">
+                <h3 id="modal-club-name"></h3>
+                <p id="modal-club-details"></p>
+                <button id="register-button">Register Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script >
+        document.addEventListener("DOMContentLoaded", function() {
+    const carousel = document.querySelector(".carousel");
+    const items = document.querySelectorAll(".carousel-item");
+    const controls = document.querySelectorAll(".carousel-dot");
+    let currentIndex = 0;
+    const totalItems = items.length;
+    const visibleItems = 3; // Number of items visible at a time
+
+    function updateCarousel() {
+        const offset = currentIndex * -100 / visibleItems;  // Calculate the correct offset based on visible items
+        carousel.style.transform = `translateX(${offset}%)`;
+        controls.forEach((control, index) => {
+            control.classList.toggle("active", index === currentIndex);
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % Math.ceil(totalItems / visibleItems);
+        updateCarousel();
+    }
+
+    let autoplay = setInterval(nextSlide, 3000);
+
+    controls.forEach((control, index) => {
+        control.addEventListener("click", () => {
+            currentIndex = index;
+            updateCarousel();
+            clearInterval(autoplay); // Stop autoplay when user manually controls the carousel
+        });
+    });
+
+    // Modal functionality
+    const modal = document.getElementById("club-modal");
+    const modalLogo = document.getElementById("modal-logo");
+    const modalClubName = document.getElementById("modal-club-name");
+    const modalClubDetails = document.getElementById("modal-club-details");
+
+    document.querySelectorAll(".club-logo").forEach(logo => {
+        logo.addEventListener("click", function() {
+            const club = this.dataset.club;
+            modalLogo.src = this.src;
+            modalClubName.textContent = club;
+            modalClubDetails.textContent = `Details about ${club}...`;
+            modal.style.display = "flex";
+        });
+    });
+
+    modal.addEventListener("click", function(e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
